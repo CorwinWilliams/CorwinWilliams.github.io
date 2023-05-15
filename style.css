@@ -1,0 +1,141 @@
+body {
+    background-color: #6e656d;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#intro {
+    color: lightgrey;
+    height: 100vh;
+}
+
+#intro h1 {
+    font-size: 84px;
+    animation: fadein ease-in 2s;
+}
+
+#intro h3 {
+    opacity: 0;
+    animation: fadein ease-in;
+    animation-delay: 0.5s;
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+}
+
+#introCode {
+    font-size: 1.7rem;
+    color: #c9ada7;
+    animation-delay: 2.35;
+    animation: fadein ease-in 2.2s;
+    animation-fill-mode: forwards;
+}
+
+#arrowDown {
+    font-size: 65px;
+    position: absolute;
+    bottom: 38px;
+    color: rgba(211, 211, 211, 0.231);
+    left: calc(50% - 37.5px);
+}
+
+#about {
+    color: lightgray;
+    background: #4a4e69;
+    padding: 30px;
+}
+
+#Contact {
+    background: #3b3b61;
+    color: lightgrey;
+    padding: 35px;
+}
+#a {
+    color: lightgray;
+}
+#Portfolio {
+    background: #212133;
+    color: rgb(211, 211, 211);
+    padding: 35px;
+}
+
+#formBlock {
+    color: #6a7095;
+    font-size: 18px;
+}
+
+#cards {
+    font-size: 18px;
+    color: #6a7095;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+}
+#emailRow {
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#concerns {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    width: 99%;
+}
+
+#button {
+    padding: 10px;
+    width: 99%;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+#fname,
+#lname {
+    padding: 5px;
+    width: 99%;
+}
+
+section {
+    box-shadow: -10px 0 28px rgb(71, 71, 71);
+    border-radius: 0.2%;
+}
+
+@media only screen and (max-width: 775px) {
+    #intro h1 {
+        font-size: 50px;
+    }
+    #intro h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.navbar {
+    background: #7a7887 !important;
+}
+
+main {
+    background: #7d819b;
+    color: lightgrey;
+    padding: 30px;
+}
+main img {
+    border-radius: 10px;
+}
+
+.home,
+.about,
+.contact,
+.portfolio {
+    color: lightgray;
+}

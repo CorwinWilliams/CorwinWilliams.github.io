@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Corwin Williams</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <section
+                id="intro"
+                class="d-flex flex-column justify-content-center align-items-center"
+            >
+                <h1>Corwin Williams Jr</h1>
+                <h3>Aspiring Full Stack Developer</h3>
+                <code id="introCode">I'm just here lol;</code>
+                <a href="#about">
+                    <span class="material-symbols-outlined" id="arrowDown">
+                        keyboard_double_arrow_down
+                    </span>
+                </a>
+            </section>
+            <section id="about">
+                <h1>About Me</h1>
+                <h5>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem nemo at nulla debitis reprehenderit eos dolores id
+                    facilis. Nemo fugit, corrupti ipsum beatae ullam quaerat
+                    optio aperiam neque iure numquam!
+                </h5>
+            </section>
+            <section id="Contact">
+                <h1>Contact</h1>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        Need to reach me? Send an
+                        <a href="mailto:corwinwilliams34@gmail.com">email</a>
+                        or fill out the provided form.
+                    </div>
+                    <!--End of reach me-->
+                    <div class="col-sm-12 col-md-6">
+                        <form>
+                            <div class="row">
+                                <div class="col" id="fname">
+                                    <input
+                                        type="text"
+                                        placeholder="First Name"
+                                    />
+                                </div>
+                                <!--End of first name col-->
+                                <div class="col" id="lname">
+                                    <input
+                                        type="text"
+                                        placeholder="Last Name"
+                                    />
+                                </div>
+                                <div id="emailRow">
+                                    <input
+                                        type="email"
+                                        placeholder="Email Address"
+                                    />
+                                </div>
+                                <textarea
+                                    placeholder="Enter your text here"
+                                    id="concerns"
+                                ></textarea>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    id="button"
+                                >
+                                    Send 📬
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="Portfolio">
+                <h1>Portfolio</h1>
+                <h3 id="cards">To view more details, please slect a card.</h3>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="card">
+                            <img
+                            src=https://portfolio.maxmatthe.ws/weatherApp.png
+                            class="card-img-top" alt="screenshot weatherapp" />
+
+                            <div class="card-body">
+                                <h5 class="card-title">Weather App</h5>
+                                <p>First front end project</p>
+                                <a href="weather.html" class="btn btn-primary"
+                                    >Make it rain</a
+                                >
+                            </div>
+                        </div>
+                        <!--Card1 Weather-->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="card">
+                            <img
+                            src=https://portfolio.maxmatthe.ws/feedbackForm.png
+                            class="card-img-top" alt="screenshot weatherapp" />
+
+                            <div class="card-body">
+                                <h5 class="card-title">Feedback Form</h5>
+                                <p>Form modeled after Google Forms.</p>
+                                <a href="#" class="btn btn-primary"
+                                    >Provide Feedback</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card2 Feedback-->
+                    <div class="col-4">
+                        <div class="card">
+                            <img src=https://portfolio.maxmatthe.ws/maxflix.png
+                            class ="card-img-top" alt="screenshot weatherapp" />
+
+                            <div class="card-body">
+                                <h5 class="card-title">Weather App</h5>
+                                <p>First front end project</p>
+                                <a href="#" class="btn btn-primary"
+                                    >Get Streaming</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!--Card3 flix-->
+                </div>
+            </section>
+            <footer>© 2023 C. Williams Tech LLC</footer>
+        </div>
+    </body>
+</html>
