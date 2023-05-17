@@ -23,7 +23,7 @@ body {
 #intro h3 {
     opacity: 0;
     animation: fadein ease-in;
-    animation-delay: 0.5s;
+    animation-delay: 1.2s;
     animation-duration: 2.2s;
     animation-fill-mode: forwards;
 }
