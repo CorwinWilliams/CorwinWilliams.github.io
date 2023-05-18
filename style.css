@@ -110,6 +110,7 @@ form textarea {
 section {
     box-shadow: -10px 0 28px rgb(71, 71, 71);
     border-radius: 22px;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 775px) {
