@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NY Times Bestseller</title>
+    </head>
+    <style>
+        a:link {
+            color: #717079;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: rgb(168, 145, 149);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgb(216, 215, 215);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: #424148;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+                sans-serif;
+            font-weight: lighter;
+            color: #88878d;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0px auto;
+            background-color: #c2c2c1;
+            padding: 28px;
+        }
+
+        .list {
+            padding-top: 40px;
+        }
+
+        .book {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+        .book img {
+            height: 100px;
+            margin-right: 18px;
+        }
+        .book a {
+            margin-left: auto;
+        }
+    </style>
+    <body>
+        <script>
+            const LIST = `
+              <div class="list">
+                <h1>{name}</h1>
+                {books}
+              </div>
+            `;
+            const BOOK = `
+              <div class="book">
+                <img src="{image}" />
+                <h2>{title} by {author}</h2>
+                <a href="{link}">Buy Book</a>
+              </div>
+            `;
+
+            const date = new Date().toISOString().split("T")[0];
+            const r = fetch(
+                `https://api.nytimes.com/svc/books/v3/lists/overview.json?published_date=${date}&api-key=XIsecIAL8LvuSlGBE9XAEnGjoSDMjOAD`
+            );
+            r.then((response) => {
+                return response.json().then((json) => {
+                    const allBestsell = json.results.lists
+                        .map((list) => {
+                            let markup = LIST.replace(
+                                "{name}",
+                                list.display_name
+                            );
+
+                            const bookMarkup = list.books
+                                .map((book) => {
+                                    return BOOK.replace("{title}", book.title)
+                                        .replace("{image}", book.book_image)
+                                        .replace("{author}", book.author)
+                                        .replace(
+                                            "{link}",
+                                            book.amazon_product_url
+                                        );
+                                })
+                                .join("");
+
+                            return markup.replace("{books}", bookMarkup);
+                        })
+                        .join("");
+
+                    const container = document.createElement("div");
+                    container.innerHTML =
+                        "<h1>NY Times Bestsellers List</h1>" + allBestsell;
+                    container.className = "container";
+                    document.body.appendChild(container);
+                });
+            });
+        </script>
+    </body>
+</html>
